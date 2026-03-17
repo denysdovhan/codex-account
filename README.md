@@ -6,10 +6,12 @@
 [![Buy Me A Coffee][buymeacoffee-image]][buymeacoffee-url]
 [![X.com][x-image]][x-url]
 
-A small CLI for switching Codex auth accounts by swapping `~/.codex/auth.json`.
+> [!NOTE]
+> A small CLI for switching Codex auth accounts by swapping `~/.codex/auth.json`.
 
-It keeps named snapshots of authenticated accounts so you can move between them
-without logging in again each time.
+Codex currently does not provide a UI for switching between saved profiles. If you use separate work and personal accounts, moving between them usually means re-authenticating or manually replacing `auth.json`.
+
+This utility keeps named snapshots of authenticated accounts so you can move between them without logging in again each time.
 
 ## Installation
 
@@ -21,15 +23,10 @@ git clone https://github.com/denysdovhan/codex-account ~/.codex/.codex-account
 ln -sfn ~/.codex/.codex-account/codex-account.sh ~/.local/bin/codex-account
 ```
 
-If you install from GitHub, make sure `~/.local/bin` is on your `PATH`;
-otherwise `codex-account` will not be found after creating the symlink.
-
-For contributors, install the local hooks after cloning:
-
-```sh
-# Install the Git hooks managed by pre-commit
-pre-commit install
-```
+> [!IMPORTANT]
+> Make sure `~/.local/bin` is on your `PATH`.
+> Otherwise, the `codex-account` command will not be available after creating the
+> symlink.
 
 ## Quick Start
 
@@ -90,6 +87,15 @@ Shorthand for `codex-account switch <account>`.
 - To add a new account, log into it with Codex first, then run
   `codex-account save <account>`.
 - Restart Codex after switching if it is already running.
+
+## Contributing
+
+Install the local Git hooks after cloning:
+
+```sh
+# Install the Git hooks managed by pre-commit
+pre-commit install
+```
 
 ## License
 
