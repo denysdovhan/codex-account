@@ -21,20 +21,25 @@ note() {
 }
 
 usage() {
-  cat <<EOF
+  cat << EOF
 $PROGRAM - switch saved Codex auth accounts
 
 Usage:
+  $PROGRAM help
   $PROGRAM <account>
   $PROGRAM list
   $PROGRAM current
   $PROGRAM save <account>
   $PROGRAM switch <account>
-  $PROGRAM help
 
 Commands:
+  help
+      Show this help message.
+
   list
       List saved auth accounts from $ACCOUNTS_HOME.
+      '*' marks the account that matches the live auth.json.
+      '~' marks the recorded current account when live auth differs.
 
   current
       Show the active account when it can be detected.
@@ -45,6 +50,15 @@ Commands:
   switch <account>
       Back up the current auth to $BACKUPS_HOME/<account>-backup.auth.json,
       then replace $AUTH_FILE with <account>.auth.json.
+
+  <account>
+      Shorthand for '$PROGRAM switch <account>'.
+
+Examples:
+  $PROGRAM save personal
+  $PROGRAM list
+  $PROGRAM switch work
+  $PROGRAM current
 
 Notes:
   - This tool only swaps auth.json. It does not touch the rest of ~/.codex.
@@ -59,8 +73,8 @@ EOF
 
 ensure_dirs() {
   mkdir -p "$CODEX_HOME" "$CODEX_ACCOUNT_DIR" "$ACCOUNTS_HOME"
-  chmod 700 "$CODEX_ACCOUNT_DIR" 2>/dev/null || true
-  chmod 700 "$ACCOUNTS_HOME" 2>/dev/null || true
+  chmod 700 "$CODEX_ACCOUNT_DIR" 2> /dev/null || true
+  chmod 700 "$ACCOUNTS_HOME" 2> /dev/null || true
 }
 
 ensure_storage() {
@@ -97,7 +111,7 @@ set_current_account() {
   local account="$1"
 
   printf '%s\n' "$account" > "$STATE_FILE"
-  chmod 600 "$STATE_FILE" 2>/dev/null || true
+  chmod 600 "$STATE_FILE" 2> /dev/null || true
 }
 
 get_recorded_account() {
@@ -134,7 +148,7 @@ copy_auth_to() {
   local destination="$1"
 
   cp "$AUTH_FILE" "$destination"
-  chmod 600 "$destination" 2>/dev/null || true
+  chmod 600 "$destination" 2> /dev/null || true
 }
 
 save_current_auth() {
@@ -153,7 +167,7 @@ restore_account_auth() {
 
   tmp_file="$(mktemp "${AUTH_FILE}.tmp.XXXXXX")"
   cp "$source" "$tmp_file"
-  chmod 600 "$tmp_file" 2>/dev/null || true
+  chmod 600 "$tmp_file" 2> /dev/null || true
   mv "$tmp_file" "$AUTH_FILE"
 }
 
@@ -286,7 +300,7 @@ main() {
     switch)
       command_switch "$@"
       ;;
-    help|-h|--help)
+    help | -h | --help)
       usage
       ;;
     *)
