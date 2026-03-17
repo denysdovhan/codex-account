@@ -1,14 +1,15 @@
+[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua/)
+
 # codex-account
 
-A small CLI utility for switching Codex auth accounts by swapping `~/.codex/auth.json`.
+[![GitHub Sponsors][gh-sponsors-image]][gh-sponsors-url]
+[![Buy Me A Coffee][buymeacoffee-image]][buymeacoffee-url]
+[![Twitter][twitter-image]][twitter-url]
 
-## Layout
+A small CLI for switching Codex auth accounts by swapping `~/.codex/auth.json`.
 
-- `codex-account.sh` — CLI entrypoint script.
-- `accounts/` — saved auth snapshots, ignored by Git.
-- `.current-account` — recorded current account, ignored by Git.
-
-Switch backups are stored alongside saved accounts as `*-backup.auth.json`.
+It keeps named snapshots of authenticated accounts so you can move between them
+without logging in again each time.
 
 ## Installation
 
@@ -17,16 +18,81 @@ git clone <repo-url> ~/.codex/.codex-account
 ln -sfn ~/.codex/.codex-account/codex-account.sh ~/.local/bin/codex-account
 ```
 
-## Usage
+For contributors, install the local hooks after cloning:
 
 ```sh
-codex-account list
-codex-account current
-codex-account save personal
-codex-account switch work
-codex-account personal
+pre-commit install
 ```
+
+## Quick Start
+
+```sh
+# Log into one Codex account first, then save it
+codex-account save personal
+
+# Logout and login into another Codex account, then save that one too
+codex-account save work
+
+# See saved accounts and the current match
+codex-account list
+
+# Switch back to a saved account
+codex-account switch personal
+
+# Show the active account
+codex-account current
+```
+
+## Commands
+
+### `codex-account help`
+
+Show the built-in help text.
+
+### `codex-account list`
+
+List saved accounts. `*` marks the account whose saved snapshot matches the live
+`auth.json`. `~` marks the recorded current account when the live auth differs
+from every saved snapshot.
+
+### `codex-account current`
+
+Print the active account name when it can be matched. If the live auth does not
+match a saved snapshot, it reports the recorded account when available.
+
+### `codex-account save <account>`
+
+Save the current `~/.codex/auth.json` as `<account>.auth.json` and mark that
+account as current.
+
+### `codex-account switch <account>`
+
+Back up the current auth as `<account>-backup.auth.json` when the current auth
+can be associated with a saved account, then restore the requested saved
+account into `~/.codex/auth.json`.
+
+### `codex-account <account>`
+
+Shorthand for `codex-account switch <account>`.
+
+## Notes
+
+- This tool only swaps `auth.json`. It does not change the rest of `~/.codex`.
+- Saved accounts live in `~/.codex/.codex-account/accounts`.
+- Named backups are stored alongside saved accounts as `*-backup.auth.json`.
+- To add a new account, log into it with Codex first, then run
+  `codex-account save <account>`.
+- Restart Codex after switching if it is already running.
 
 ## License
 
 MIT © [Denys Dovhan](https://denysdovhan.com)
+
+<!-- Badges -->
+
+[gh-sponsors-url]: https://github.com/sponsors/denysdovhan
+[gh-sponsors-image]: https://img.shields.io/github/sponsors/denysdovhan?style=flat-square
+[buymeacoffee-url]: https://patreon.com/denysdovhan
+[buymeacoffee-image]: https://img.shields.io/badge/support-buymeacoffee-222222.svg?style=flat-square
+[twitter-url]: https://x.com/denysdovhan
+[twitter-image]: https://img.shields.io/badge/follow-%40denysdovhan-000000.svg?style=flat-square
