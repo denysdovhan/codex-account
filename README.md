@@ -4,7 +4,7 @@
 
 [![GitHub Sponsors][gh-sponsors-image]][gh-sponsors-url]
 [![Buy Me A Coffee][buymeacoffee-image]][buymeacoffee-url]
-[![Twitter][twitter-image]][twitter-url]
+[![X.com][x-image]][x-url]
 
 A small CLI for switching Codex auth accounts by swapping `~/.codex/auth.json`.
 
@@ -94,5 +94,5 @@ MIT © [Denys Dovhan](https://denysdovhan.com)
 [gh-sponsors-image]: https://img.shields.io/github/sponsors/denysdovhan?style=flat-square
 [buymeacoffee-url]: https://patreon.com/denysdovhan
 [buymeacoffee-image]: https://img.shields.io/badge/support-buymeacoffee-222222.svg?style=flat-square
-[twitter-url]: https://x.com/denysdovhan
-[twitter-image]: https://img.shields.io/badge/follow-%40denysdovhan-000000.svg?style=flat-square
+[x-url]: https://x.com/denysdovhan
+[x-image]: https://img.shields.io/badge/follow-%40denysdovhan-000000.svg?style=flat-square
