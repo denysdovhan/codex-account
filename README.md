@@ -14,13 +14,20 @@ without logging in again each time.
 ## Installation
 
 ```sh
-git clone <repo-url> ~/.codex/.codex-account
+# Clone the repository into Codex's config area
+git clone https://github.com/denysdovhan/codex-account ~/.codex/.codex-account
+
+# Expose the script as a runnable command from your local bin directory
 ln -sfn ~/.codex/.codex-account/codex-account.sh ~/.local/bin/codex-account
 ```
+
+If you install from GitHub, make sure `~/.local/bin` is on your `PATH`;
+otherwise `codex-account` will not be found after creating the symlink.
 
 For contributors, install the local hooks after cloning:
 
 ```sh
+# Install the Git hooks managed by pre-commit
 pre-commit install
 ```
 
