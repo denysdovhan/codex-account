@@ -75,6 +75,9 @@ Back up the current auth as `<account>-backup.auth.json` when the current auth
 can be associated with a saved account, then restore the requested saved
 account into `~/.codex/auth.json`.
 
+> [!IMPORTANT]
+> Restart Codex after switching if it is already running.
+
 ### `codex-account <account>`
 
 Shorthand for `codex-account switch <account>`.
