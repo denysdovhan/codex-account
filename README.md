@@ -90,9 +90,9 @@ MIT © [Denys Dovhan](https://denysdovhan.com)
 
 <!-- Badges -->
 
-[gh-sponsors-url]: https://github.com/sponsors/denysdovhan
-[gh-sponsors-image]: https://img.shields.io/github/sponsors/denysdovhan?style=flat-square
-[buymeacoffee-url]: https://patreon.com/denysdovhan
 [buymeacoffee-image]: https://img.shields.io/badge/support-buymeacoffee-222222.svg?style=flat-square
-[x-url]: https://x.com/denysdovhan
+[buymeacoffee-url]: https://patreon.com/denysdovhan
+[gh-sponsors-image]: https://img.shields.io/github/sponsors/denysdovhan?style=flat-square
+[gh-sponsors-url]: https://github.com/sponsors/denysdovhan
 [x-image]: https://img.shields.io/badge/follow-%40denysdovhan-000000.svg?style=flat-square
+[x-url]: https://x.com/denysdovhan
