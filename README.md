@@ -1,5 +1,7 @@
 [![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua/)
 
+![Codex Account Demo](https://github.com/user-attachments/assets/96cd73c7-84b7-4df8-92c8-4924ae71d4f8)
+
 # codex-account
 
 [![GitHub Sponsors][gh-sponsors-image]][gh-sponsors-url]
