@@ -1,6 +1,9 @@
 [![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua/)
 
-![Codex Account Demo](https://github.com/user-attachments/assets/96cd73c7-84b7-4df8-92c8-4924ae71d4f8)
+<!-- markdownlint-disable no-inline-html -->
+<p align="center">
+  <img alt="Codex Account Demo" src="https://github.com/user-attachments/assets/96cd73c7-84b7-4df8-92c8-4924ae71d4f8" />
+</p>
 
 # codex-account
 
