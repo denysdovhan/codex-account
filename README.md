@@ -1,6 +1,7 @@
 [![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua/)
 
 <!-- markdownlint-disable no-inline-html -->
+
 <p align="center">
   <img alt="Codex Account Demo" src="https://github.com/user-attachments/assets/96cd73c7-84b7-4df8-92c8-4924ae71d4f8" />
 </p>
@@ -112,10 +113,10 @@ MIT © [Denys Dovhan](https://denysdovhan.com)
 
 <!-- Badges -->
 
-[gh-actions-image]: https://img.shields.io/github/actions/workflow/status/denysdovhan/codex-account/ci.yml?style=flat-square&branch=main
-[gh-actions-url]: https://github.com/denysdovhan/codex-account/actions/workflows/ci.yml
 [buymeacoffee-image]: https://img.shields.io/badge/support-buymeacoffee-222222.svg?style=flat-square
 [buymeacoffee-url]: https://patreon.com/denysdovhan
+[gh-actions-image]: https://img.shields.io/github/actions/workflow/status/denysdovhan/codex-account/ci.yml?style=flat-square&branch=main
+[gh-actions-url]: https://github.com/denysdovhan/codex-account/actions/workflows/ci.yml
 [gh-sponsors-image]: https://img.shields.io/github/sponsors/denysdovhan?style=flat-square
 [gh-sponsors-url]: https://github.com/sponsors/denysdovhan
 [x-image]: https://img.shields.io/badge/follow-%40denysdovhan-000000.svg?style=flat-square
