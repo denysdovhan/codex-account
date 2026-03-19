@@ -9,6 +9,7 @@
 
 # codex-account
 
+[![GitHub Actions][gh-actions-image]][gh-actions-url]
 [![GitHub Sponsors][gh-sponsors-image]][gh-sponsors-url]
 [![Buy Me A Coffee][buymeacoffee-image]][buymeacoffee-url]
 [![X.com][x-image]][x-url]
@@ -115,6 +116,8 @@ MIT © [Denys Dovhan](https://denysdovhan.com)
 
 [buymeacoffee-image]: https://img.shields.io/badge/support-buymeacoffee-222222.svg?style=flat-square
 [buymeacoffee-url]: https://patreon.com/denysdovhan
+[gh-actions-image]: https://img.shields.io/github/actions/workflow/status/denysdovhan/codex-account/ci.yml?style=flat-square&branch=main
+[gh-actions-url]: https://github.com/denysdovhan/codex-account/actions/workflows/ci.yml
 [gh-sponsors-image]: https://img.shields.io/github/sponsors/denysdovhan?style=flat-square
 [gh-sponsors-url]: https://github.com/sponsors/denysdovhan
 [x-image]: https://img.shields.io/badge/follow-%40denysdovhan-000000.svg?style=flat-square
